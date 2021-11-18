@@ -59,6 +59,6 @@ jobs:
           # Выполняет pull образа с DockerHub
           #остановка всех контейнеров
           script: |
-            sudo docker pull <имя-пользователя>/<имя-репозитория>
+            sudo docker pull sttpforever/infra_actions
             sudo docker stop $(sudo docker ps -a -q)
             sudo docker run --rm -d -p 5000:5000 sttpforever/infra_actions
